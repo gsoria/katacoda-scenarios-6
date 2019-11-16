@@ -1,5 +1,5 @@
-if [[ $(docker container inspect etcd | grep -i hostport| grep  -q 4001) ]]; then
+HOSTPORTOUTPUT=$(echo $(docker inspect $(docker ps | grep etcd | awk '{print $1}') | grep -i hostport| grep -oP '(?<="HostPort": ")(.*)(?=")'| sort --uniq))
+ECHOPORT=$(echo 4001)
+if [ "$HOSTPORTOUTPUT" == "$ECHOPORT" ]; then
     echo "done"
-else
-    echo "no containers found"
 fi
