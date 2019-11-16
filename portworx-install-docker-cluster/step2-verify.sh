@@ -3,4 +3,3 @@
 # if [ "$HOSTPORTOUTPUT" == "$ECHOPORT" ]; then
 #     echo "done"
 # fi
-echo "nodone"
