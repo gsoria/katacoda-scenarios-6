@@ -11,6 +11,11 @@
 	      "verify": "step2-verify.sh"
       },
       {
+        "title": "Install a Single Node ETCD",
+        "text": "step2.2.md",
+        "verify": "step2.2-verify.sh"
+      },
+      {
         "title": "Install the PX OCI bundle on node01",
         "text": "step3.md"
       },
