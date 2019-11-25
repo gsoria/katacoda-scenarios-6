@@ -6,6 +6,10 @@
   "details": {
     "steps": [
       {
+        "title": "Quiz",
+        "text": "step0.md"
+      },
+      {
         "title": "Install a Single Node ETCD",
         "text": "step2.md",
 	      "verify": "step2-verify.sh"
@@ -48,7 +52,7 @@
     },
     "assets": {
       "host01": [
-	 {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+	        {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
       ]
     }
     },
