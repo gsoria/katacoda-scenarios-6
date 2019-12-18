@@ -12,7 +12,12 @@
       {
         "title": "Install a Single Node ETCD",
         "text": "step2.md",
-	      "verify": "step2-verify.sh"
+        "verify": "step2-verify.sh"
+      },
+      {
+        "title": "Empty script",
+        "text": "step2.1.md",
+        "verify": "step2.1-verify.sh"
       },
       {
         "title": "Install a Single Node ETCD",
@@ -30,17 +35,17 @@
       {
         "title": "Start Services",
         "text": "step5.md",
-	      "verify": "step5-verify.sh"
+        "verify": "step5-verify.sh"
       },
       {
         "title": "Add Nodes node02 and node03",
-	      "text": "step6.md",
+        "text": "step6.md",
         "verify": "step6-verify.sh"
       },
       {
         "title": "Verify Installation",
         "text": "step7.md",
-        "verify":"step7-verify.sh"
+        "verify": "step7-verify.sh"
       }
     ],
     "intro": {
@@ -52,17 +57,38 @@
     },
     "assets": {
       "host01": [
-	        {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+        {
+          "file": "px-spec.yaml",
+          "target": "/root/",
+          "chmod": "+x"
+        }
       ]
     }
-    },
-    "environment": {
-    "uilayout": "terminal",
+  },
+  "environment": {
+    "uilayout": "terminal-v1",
     "hidefinish": true,
-    "hideintro": true
-    },
-    "backend": {
+    "hideintro": true,
+    "uidependencies": [
+      "/socket.io/socket.io.js",
+      "/javascripts/term.js",
+      "/javascripts/terminal-application.js"
+    ]
+  },
+  "backend": {
     "trainingid": "ubuntu",
-    "imageid": "ubuntu"
-    }
+    "imageid": "ubuntu",
+    "dockerimage": "dind1604-direct",
+    "backendTarget": "server"
+  },
+  "gitBased": true,
+  "id": "verified-steps-and-quiz",
+  "pathwayTitle": "_smoketests",
+  "pathwayId": "_smoketests",
+  "error": [],
+  "live": true,
+  "authenticated": true,
+  "lastUpdated": "2019-11-25T04:29:41.085Z",
+  "gitCommit": "ee9bff002be303bb5452b265f1641cc101f9e333",
+  "gitRepo": "https://github.com/gsoria/katacoda-scenarios-6.git"
 }
